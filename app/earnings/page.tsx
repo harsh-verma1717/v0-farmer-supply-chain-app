@@ -15,9 +15,9 @@ export default function EarningsPage() {
   const [timeFilter, setTimeFilter] = useState("month")
 
   const [earnings] = useState({
-    total: 2840,
-    thisMonth: 680,
-    pending: 275,
+    total: 214400,
+    thisMonth: 51300,
+    pending: 20800,
     growth: 12.5,
   })
 
@@ -26,50 +26,50 @@ export default function EarningsPage() {
       id: "TXN001",
       productId: "TOM001",
       productName: "Organic Tomatoes",
-      amount: 245,
+      amount: 18500,
       date: "2024-01-20",
       status: "completed",
-      buyer: "Fresh Market Co.",
+      buyer: "Fresh Bazaar Pvt Ltd",
       blockchainTx: "0x1a2b3c4d...",
     },
     {
       id: "TXN002",
       productId: "POT005",
       productName: "Potatoes",
-      amount: 160,
+      amount: 12100,
       date: "2024-01-18",
       status: "completed",
-      buyer: "City Grocers",
+      buyer: "Metro Cash & Carry",
       blockchainTx: "0x5e6f7g8h...",
     },
     {
       id: "TXN003",
       productId: "CRN003",
       productName: "Sweet Corn",
-      amount: 180,
+      amount: 13600,
       date: "2024-01-15",
       status: "pending",
-      buyer: "Valley Foods",
+      buyer: "Big Basket",
       blockchainTx: "Pending...",
     },
     {
       id: "TXN004",
       productId: "LET002",
       productName: "Fresh Lettuce",
-      amount: 95,
+      amount: 7200,
       date: "2024-01-12",
       status: "pending",
-      buyer: "Green Grocers",
+      buyer: "Nature's Basket",
       blockchainTx: "Pending...",
     },
   ])
 
   const chartData = [
-    { month: "Sep", earnings: 420 },
-    { month: "Oct", earnings: 580 },
-    { month: "Nov", earnings: 720 },
-    { month: "Dec", earnings: 640 },
-    { month: "Jan", earnings: 680 },
+    { month: "Sep", earnings: 31700 },
+    { month: "Oct", earnings: 43800 },
+    { month: "Nov", earnings: 54400 },
+    { month: "Dec", earnings: 48300 },
+    { month: "Jan", earnings: 51300 },
   ]
 
   const getStatusColor = (status: string) => {
@@ -113,7 +113,7 @@ export default function EarningsPage() {
                   <DollarSign className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-foreground">${earnings.total.toLocaleString()}</p>
+                  <p className="text-2xl font-bold text-foreground">₹{earnings.total.toLocaleString()}</p>
                   <p className="text-sm text-muted-foreground">Total Earnings</p>
                 </div>
               </div>
@@ -127,7 +127,7 @@ export default function EarningsPage() {
                   <TrendingUp className="w-5 h-5 text-accent-foreground" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-foreground">${earnings.thisMonth}</p>
+                  <p className="text-2xl font-bold text-foreground">₹{earnings.thisMonth}</p>
                   <p className="text-sm text-muted-foreground">This Month</p>
                 </div>
               </div>
@@ -143,7 +143,7 @@ export default function EarningsPage() {
                   <Calendar className="w-5 h-5 text-yellow-600" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-foreground">${earnings.pending}</p>
+                  <p className="text-2xl font-bold text-foreground">₹{earnings.pending}</p>
                   <p className="text-sm text-muted-foreground">Pending</p>
                 </div>
               </div>
@@ -244,7 +244,7 @@ export default function EarningsPage() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-lg font-bold text-foreground">${transaction.amount}</p>
+                  <p className="text-lg font-bold text-foreground">₹{transaction.amount}</p>
                   <Badge variant="outline" className={getStatusColor(transaction.status)}>
                     {transaction.status}
                   </Badge>

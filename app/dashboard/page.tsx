@@ -11,14 +11,14 @@ import { useRouter } from "next/navigation"
 export default function DashboardPage() {
   const router = useRouter()
   const [notifications] = useState([
-    { id: 1, message: "Tomatoes #TOM001 sold for $245", type: "payment" },
+    { id: 1, message: "Tomatoes #TOM001 sold for ₹18,500", type: "payment" },
     { id: 2, message: "Corn #CRN003 in transit", type: "status" },
   ])
 
   const [recentProducts] = useState([
-    { id: "TOM001", name: "Organic Tomatoes", status: "sold", value: "$245", date: "2 days ago" },
-    { id: "CRN003", name: "Sweet Corn", status: "transit", value: "$180", date: "1 week ago" },
-    { id: "LET002", name: "Fresh Lettuce", status: "pending", value: "$95", date: "3 days ago" },
+    { id: "TOM001", name: "Organic Tomatoes", status: "sold", value: "₹18,500", date: "2 days ago" },
+    { id: "CRN003", name: "Sweet Corn", status: "transit", value: "₹13,600", date: "1 week ago" },
+    { id: "LET002", name: "Fresh Lettuce", status: "pending", value: "₹7,200", date: "3 days ago" },
   ])
 
   const getStatusColor = (status: string) => {
@@ -57,8 +57,8 @@ export default function DashboardPage() {
               <Leaf className="w-5 h-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">Good morning, John</h1>
-              <p className="text-sm text-muted-foreground">Green Valley Farm</p>
+              <h1 className="text-xl font-bold text-foreground">Good morning, Rajesh</h1>
+              <p className="text-sm text-muted-foreground">Krishna Valley Farm</p>
             </div>
           </div>
           <div className="flex items-center space-x-2">
@@ -83,7 +83,7 @@ export default function DashboardPage() {
                   <DollarSign className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-foreground">$2,840</p>
+                  <p className="text-2xl font-bold text-foreground">₹2,14,400</p>
                   <p className="text-sm text-muted-foreground">Total Earnings</p>
                 </div>
               </div>

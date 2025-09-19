@@ -25,12 +25,12 @@ import { useRouter } from "next/navigation"
 export default function SettingsPage() {
   const router = useRouter()
   const [profile, setProfile] = useState({
-    name: "John Smith",
-    email: "john.smith@email.com",
-    phone: "+1 (555) 123-4567",
-    farmName: "Green Valley Farm",
-    address: "123 Farm Road, Valley County, CA 95123",
-    bankAccount: "**** **** **** 1234",
+    name: "Rajesh Kumar",
+    email: "rajesh.kumar@gmail.com",
+    phone: "+91 98765 43210",
+    farmName: "Krishna Valley Farm",
+    address: "Village Rampur, Tehsil Kharkhoda, District Sonipat, Haryana 131001",
+    bankAccount: "**** **** **** 5678",
   })
 
   const [notifications, setNotifications] = useState({

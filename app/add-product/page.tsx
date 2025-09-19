@@ -69,16 +69,21 @@ export default function AddProductPage() {
   }
 
   const cropOptions = [
+    "Rice",
+    "Wheat",
+    "Sugarcane",
+    "Cotton",
+    "Maize",
+    "Bajra",
+    "Jowar",
+    "Pulses",
     "Tomatoes",
-    "Corn",
-    "Lettuce",
-    "Carrots",
-    "Potatoes",
     "Onions",
-    "Peppers",
-    "Cucumbers",
-    "Spinach",
-    "Broccoli",
+    "Potatoes",
+    "Cauliflower",
+    "Cabbage",
+    "Okra",
+    "Brinjal",
     "Other",
   ]
 
@@ -258,8 +263,8 @@ export default function AddProductPage() {
           <CardContent>
             <div className="space-y-4">
               <div className="p-4 bg-muted/50 rounded-lg">
-                <p className="font-medium text-foreground">Green Valley Farm</p>
-                <p className="text-sm text-muted-foreground">123 Farm Road, Valley County</p>
+                <p className="font-medium text-foreground">Krishna Valley Farm</p>
+                <p className="text-sm text-muted-foreground">Village Rampur, Sonipat, Haryana</p>
                 {latitude && longitude ? (
                   <p className="text-xs text-muted-foreground mt-1">
                     GPS: {latitude.toFixed(6)}, {longitude.toFixed(6)}

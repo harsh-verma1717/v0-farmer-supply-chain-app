@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -8,6 +9,7 @@ import { Label } from "@/components/ui/label"
 import { Leaf, MapPin, User, Phone } from "lucide-react"
 
 export default function OnboardingPage() {
+  const router = useRouter()
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState({
     name: "",
@@ -30,6 +32,7 @@ export default function OnboardingPage() {
     // In a real app, this would save to blockchain/database
     console.log("Farmer registered:", formData)
     // Navigate to dashboard
+    router.push("/dashboard")
   }
 
   return (
@@ -90,7 +93,7 @@ export default function OnboardingPage() {
                   </Label>
                   <Input
                     id="phone"
-                    placeholder="Enter your phone number"
+                    placeholder="+91 98765 43210"
                     value={formData.phone}
                     onChange={(e) => handleInputChange("phone", e.target.value)}
                     className="text-lg py-3"
@@ -124,7 +127,7 @@ export default function OnboardingPage() {
                   </Label>
                   <Input
                     id="location"
-                    placeholder="Enter your farm address"
+                    placeholder="Village, Tehsil, District, State"
                     value={formData.location}
                     onChange={(e) => handleInputChange("location", e.target.value)}
                     className="text-lg py-3"

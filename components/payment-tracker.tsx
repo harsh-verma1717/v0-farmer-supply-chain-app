@@ -21,7 +21,7 @@ export function PaymentTracker() {
     {
       id: "pay_001",
       productId: "TOM001",
-      amount: 245,
+      amount: 18500,
       status: "completed",
       transactionHash: "0x1234...5678",
       timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000),
@@ -29,7 +29,7 @@ export function PaymentTracker() {
     {
       id: "pay_002",
       productId: "CRN003",
-      amount: 180,
+      amount: 13600,
       status: "processing",
       timestamp: new Date(Date.now() - 30 * 60 * 1000),
       estimatedCompletion: new Date(Date.now() + 10 * 60 * 1000),
@@ -37,7 +37,7 @@ export function PaymentTracker() {
     {
       id: "pay_003",
       productId: "LET002",
-      amount: 95,
+      amount: 7200,
       status: "pending",
       timestamp: new Date(Date.now() - 60 * 60 * 1000),
     },
@@ -98,7 +98,7 @@ export function PaymentTracker() {
                 {getStatusIcon(payment.status)}
                 <div>
                   <p className="font-medium">Product #{payment.productId}</p>
-                  <p className="text-sm text-muted-foreground">${payment.amount}</p>
+                  <p className="text-sm text-muted-foreground">₹{payment.amount}</p>
                 </div>
               </div>
               <Badge variant="outline" className={getStatusColor(payment.status)}>

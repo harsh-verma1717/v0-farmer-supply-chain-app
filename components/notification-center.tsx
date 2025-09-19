@@ -20,7 +20,7 @@ export function NotificationCenter() {
     {
       id: "1",
       title: "Payment Received",
-      message: "Tomatoes #TOM001 sold for $245",
+      message: "Tomatoes #TOM001 sold for ₹18,500",
       type: "payment",
       timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000), // 2 hours ago
       read: false,
